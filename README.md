@@ -1,6 +1,6 @@
 # sl-press
 
-An experimental content/typography stylesheet for Shoelace.
+An experimental content/typography stylesheet for Shoelace. [View on Render.](https://sl-press.onrender.com)
 
 Open `dist/index.html` in your web browser.
 
