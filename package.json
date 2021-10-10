@@ -1,0 +1,15 @@
+{
+  "name": "sl-press",
+  "version": "1.0.0",
+  "author": "Jared White",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "cp src/index.html dist/index.html && postcss -u postcss-nested -o dist/sl-press.css src/*.css"
+  },
+  "dependencies": {
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1",
+    "postcss-nested": "^5.0.6"
+  }
+}

@@ -1,0 +1,183 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background: rgb(var(--sl-color-neutral-0));
+  color: rgb(var(--sl-color-neutral-700));
+
+  & main {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 57rem;
+  }
+}
+
+.sl-press {
+  /* redefined variables */
+  --sl-line-height-normal: 1.6;
+  --sl-font-size-x-large: 1.75rem;
+
+  /* new variables */
+  --sl-font-weight-black: 900;
+
+  --sl-press-blockquote-background-color: rgb(var(--sl-color-primary-50));
+  --sl-press-blockquote-text-color: rgb(var(--sl-color-primary-950));
+  --sl-press-blockquote-border-thickest: 8px solid rgb(var(--sl-color-primary-600));
+  --sl-press-blockquote-border-thinnest: 1px solid rgb(var(--sl-color-primary-200));
+  --sl-press-blockquote-shadow: var(--sl-shadow-large);
+  --sl-press-link-offset: 0.2em;
+  --sl-press-hr-border: 3px solid rgb(var(--sl-color-neutral-300));
+  --sl-press-unordered-list-type: square;
+
+  font-family: var(--sl-font-sans);
+  font-weight: var(--sl-font-weight-normal);
+  font-style: normal;
+  line-height: var(--sl-line-height-normal);
+
+  & h1 {
+    font-family: var(--sl-font-sans);
+    font-weight: var(--sl-font-weight-black);
+    font-size: var(--sl-font-size-3x-large);
+    margin: var(--sl-spacing-2x-large) 0;
+    line-height: var(--sl-line-height-dense);
+    letter-spacing: var(--sl-letter-spacing-dense);
+    color: rgb(var(--sl-color-neutral-950));
+    text-align: center;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  & h2 {
+    font-family: var(--sl-font-sans);
+    font-weight: var(--sl-font-weight-bold);
+    font-size: var(--sl-font-size-2x-large);
+    margin: var(--sl-spacing-2x-large) 0;
+    line-height: var(--sl-line-height-dense);
+    letter-spacing: var(--sl-letter-spacing-normal);
+    color: rgb(var(--sl-color-neutral-950));
+    text-align: center;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  & h3 {
+    font-family: var(--sl-font-sans);
+    font-weight: var(--sl-font-weight-bold);
+    font-size: var(--sl-font-size-x-large);
+    margin: var(--sl-spacing-2x-large) 0 var(--sl-spacing-x-large);
+    letter-spacing: var(--sl-letter-spacing-normal);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  & p, & ul, & ol {
+    margin: 0 0 var(--sl-spacing-large);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  & p + ul, & p + ol, & ul + p, & ol + p {
+    margin-top: var(--sl-spacing-large);
+  }
+
+  & ul, & ol {
+    margin-left: var(--sl-spacing-x-large);
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    & > li {
+      margin: 0 0 var(--sl-spacing-small);
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  & ul {
+    list-style-type: var(--sl-press-unordered-list-type);
+  }
+
+  & a {
+    color: rgb(var(--sl-color-primary-700));
+    text-decoration-color: rgb(var(--sl-color-primary-400));
+    text-underline-offset: var(--sl-press-link-offset);
+  }
+
+  & blockquote {
+    margin: var(--sl-spacing-x-large) 0 var(--sl-spacing-large);
+    padding: var(--sl-spacing-x-large);
+    background: var(--sl-press-blockquote-background-color);
+    color: var(--sl-press-blockquote-text-color);
+    border: var(--sl-press-blockquote-border-thinnest);
+    border-left: var(--sl-press-blockquote-border-thickest);
+    box-shadow: var(--sl-press-blockquote-shadow);
+  }
+
+  hr {
+    border: none;
+    border-top: var(--sl-press-hr-border);
+    margin: var(--sl-spacing-3x-large) auto;
+  }
+
+  & table {
+    display: table;
+    margin-top: var(--sl-spacing-x-large);
+    margin-bottom: var(--sl-spacing-x-large);
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: auto;
+    width: 100%;
+  }
+  
+  & tr {
+    border: none;
+  }
+  
+  & tr:nth-child(2n) {
+    background: rgb(var(--sl-color-neutral-50));
+  }
+  
+  & th {
+    border: none;
+    font-weight: var(--sl-font-weight-semibold);
+    text-align: left;
+    padding: var(--sl-spacing-x-small) var(--sl-spacing-medium);
+  }
+  
+  & td {
+    border-top: solid 1px rgb(var(--sl-color-neutral-200));
+    border-bottom: solid 1px rgb(var(--sl-color-neutral-200));
+    border-left: none;
+    border-right: none;
+    padding: var(--sl-spacing-x-small) var(--sl-spacing-medium);;
+  }
+}
+
+/* additional preferences */
+
+.sl-press {
+  & h3 {
+    border-bottom: 1px solid rgb(var(--sl-color-neutral-200));
+  }
+}
